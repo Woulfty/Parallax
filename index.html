@@ -22,7 +22,35 @@
         <img src="IMG/moon.png" id="moon">
         <img src="IMG/mountain_behind.png" id="mountain_behind">
         <h2 id="text">Moon Ligth</h2>
+        <a href="#sec" id="btn">Explore</a>
         <img src="IMG/mountain_front.png" id="mountain_front">
     </section>
+    <div class="sec" id="sec">
+        <h2>Paralax Scrolliong</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam ab corporis repellat autem magnam, tenetur minima. Velit ab, ut nisi asperiores dolorum praesentium debitis expedita porro quia tenetur, recusandae natus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero pariatur, delectus iste incidunt cumque temporibus, velit commodi enim, officiis consequuntur porro quibusdam illum deleniti accusamus recusandae architecto eaque in tempora. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus animi tenetur perferendis eveniet ipsum? Ducimus quos odio repellat illo placeat, error, dolorum, aliquam voluptatibus optio autem eaque nihil quo maxime.</p>
+    </div>
+
+    <script>
+        let stars           = document.getElementById('stars');
+        let moon            = document.getElementById('moon');
+        let mountain_behind = document.getElementById('mountain_behind');
+        let text            = document.getElementById('text');
+        let btn             = document.getElementById('btn');
+        let mountain_front  = document.getElementById('mountain_front');
+        let sec             = document.getElementById('sec');
+        let header          = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left            = value + 0.25  + 'px';
+            moon.style.top              = value + 1.05  + 'px';
+            mountain_behind.style.top   = value + 0.05  + 'px';
+            //mountain_front.style.top    = value + 0     + 'px';
+            text.style.marginRight      = value + 4     + 'px';
+            text.style.marginTop        = value + 1.5   + 'px';
+            btn.style.marginTop         = value + 1.5   + 'px';
+            header.style.top            = value + 0.5   + 'px';
+        })
+    </script>
 </body>
 </html>
